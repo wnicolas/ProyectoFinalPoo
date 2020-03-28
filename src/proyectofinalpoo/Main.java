@@ -3,6 +3,8 @@ package proyectofinalpoo;
 
 import controlador.ControladorVistaConsulta;
 import controlador.ControladorVistaRegistroCedula;
+import datos.ArchivosBinariosCiudadano;
+import datos.ArchivosBinariosPuestoVotacion;
 import modelo.Modelo;
 import vista.VistaPuestosVotacion;
 import vista.VistaRegistroCedula;
@@ -21,6 +23,10 @@ public class Main {
        
        ControladorVistaConsulta vistaConsulta=new ControladorVistaConsulta(modelo, puestosVotacion, controladorVistaRegistroCedula);       
               
+       
+        ArchivosBinariosPuestoVotacion a=new ArchivosBinariosPuestoVotacion();
+        a.escribir();
+       // a.leer();
     }
     
 }
