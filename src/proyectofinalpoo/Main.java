@@ -1,20 +1,26 @@
 
 package proyectofinalpoo;
 
+import controlador.ControladorVistaConsulta;
 import controlador.ControladorVistaRegistroCedula;
 import modelo.Modelo;
+import vista.VistaPuestosVotacion;
 import vista.VistaRegistroCedula;
 
 public class Main {
 
     public static void main(String[] args) {
        Modelo modelo=new Modelo();
+       
        VistaRegistroCedula vistaRegistroCedula=new VistaRegistroCedula();
-       ControladorVistaRegistroCedula controladorVistaRegistroCedula=new ControladorVistaRegistroCedula(modelo, vistaRegistroCedula);
+       VistaPuestosVotacion puestosVotacion=new VistaPuestosVotacion();
+       ControladorVistaRegistroCedula controladorVistaRegistroCedula=new ControladorVistaRegistroCedula(modelo, vistaRegistroCedula, puestosVotacion);
        
        controladorVistaRegistroCedula.iniciar();
        vistaRegistroCedula.setVisible(true);   
-       System.out.println(modelo.getPuesto().get(0).getLugar());
+       
+       ControladorVistaConsulta vistaConsulta=new ControladorVistaConsulta(modelo, puestosVotacion, controladorVistaRegistroCedula);       
+              
     }
     
 }

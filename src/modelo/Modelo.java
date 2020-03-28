@@ -1,27 +1,32 @@
 
 package modelo;
 
+import controlador.ControladorVistaConsulta;
 import datos.LectorPuestos;
 import java.util.ArrayList;
 import negocio.Ciudadano;
 import negocio.PuestoVotacion;
 
 public class Modelo {
-    private Ciudadano ciudadano;
+    
     private PuestoVotacion puestoVotacion;
     private ArrayList<PuestoVotacion> puesto=new ArrayList();
+    private ArrayList<Ciudadano> ciudadano=new ArrayList<Ciudadano>();
     
     public Modelo(){
-         LectorPuestos lectorPuesto=new LectorPuestos(this);
+        LectorPuestos lectorPuesto=new LectorPuestos(this);
+         
+         
     }
 
-    public Ciudadano getCiudadano() {
+    public ArrayList<Ciudadano> getCiudadano() {
         return ciudadano;
     }
 
-    public void setCiudadano(Ciudadano ciudadano) {
+    public void setCiudadano(ArrayList<Ciudadano> ciudadano) {
         this.ciudadano = ciudadano;
     }
+
 
     public PuestoVotacion getPuestoVotacion() {
         return puestoVotacion;
@@ -37,10 +42,7 @@ public class Modelo {
 
     public void setPuesto(ArrayList<PuestoVotacion> puesto) {
         this.puesto = puesto;
-    }
-        
-    
-    
+    }  
     
 }
     
