@@ -3,6 +3,7 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
+import javax.swing.JFrame;
 import modelo.Modelo;
 import negocio.Ciudadano;
 import vista.VistaPuestosVotacion;
@@ -30,6 +31,7 @@ public class ControladorVistaRegistroCedula implements ActionListener, Serializa
 
     public void iniciar() {
         vistaRegistroCedula.setLocationRelativeTo(null);
+        vistaRegistroCedula.setVisible(true);
     }
 
     @Override
@@ -37,29 +39,22 @@ public class ControladorVistaRegistroCedula implements ActionListener, Serializa
         modelo.getArchivosBinariosCiudadano().leer();
 
         if (e.getSource() == vistaRegistroCedula.btnRegistrar) {
-
-            modelo.getCiudadano().add(new Ciudadano(Integer.parseInt(vistaRegistroCedula.txtCedula.getText()), Integer.parseInt(vistaRegistroCedula.cbxDiaExpedicion.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxMesExpedicion.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxAnoExpedicion.getSelectedItem().toString()),
+            
+            Ciudadano ciudadano=new Ciudadano(Integer.parseInt(vistaRegistroCedula.txtCedula.getText()), Integer.parseInt(vistaRegistroCedula.cbxDiaExpedicion.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxMesExpedicion.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxAnoExpedicion.getSelectedItem().toString()),
                     vistaRegistroCedula.txtLugarExpedicion.getText(), vistaRegistroCedula.txtPApellido.getText(), vistaRegistroCedula.txtSApellido.getText(), vistaRegistroCedula.txtPNombre.getText(), vistaRegistroCedula.txtSNombre.getText(),
                     Integer.parseInt(vistaRegistroCedula.cbxDiaNacimiento.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxMesNacimiento.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxAnoNacimiento.getSelectedItem().toString()),
-                    vistaRegistroCedula.txtLugarNacimiento.getText(), vistaRegistroCedula.cbxSexo.getSelectedItem().toString(),modelo.getPuesto().get(elementeSoleccionado-1)));
+                    vistaRegistroCedula.txtLugarNacimiento.getText(), vistaRegistroCedula.cbxSexo.getSelectedItem().toString(), modelo.getPuesto().get(elementeSoleccionado - 1));
 
+            modelo.getCiudadano().add(ciudadano);
             modelo.getArchivosBinariosCiudadano().escribir();
             
+            modelo.getPuesto().get(elementeSoleccionado-1).getCiudadano().add(ciudadano);
 
-            /*modelo.getPuesto().get(elementeSoleccionado).getCiudadano().add(new Ciudadano(Integer.parseInt(vistaRegistroCedula.txtCedula.getText()), Integer.parseInt(vistaRegistroCedula.cbxDiaExpedicion.getSelectedItem().toString()),Integer.parseInt(vistaRegistroCedula.cbxMesExpedicion.getSelectedItem().toString()),Integer.parseInt(vistaRegistroCedula.cbxAnoExpedicion.getSelectedItem().toString()),
-                               vistaRegistroCedula.txtLugarExpedicion.getText(),vistaRegistroCedula.txtPApellido.getText(),vistaRegistroCedula.txtSApellido.getText(),vistaRegistroCedula.txtPNombre.getText(),vistaRegistroCedula.txtSNombre.getText(),
-                                Integer.parseInt(vistaRegistroCedula.cbxDiaNacimiento.getSelectedItem().toString()),Integer.parseInt(vistaRegistroCedula.cbxMesNacimiento.getSelectedItem().toString()),Integer.parseInt(vistaRegistroCedula.cbxAnoNacimiento.getSelectedItem().toString()),
-                                vistaRegistroCedula.txtLugarNacimiento.getText(),vistaRegistroCedula.cbxSexo.getSelectedItem().toString()));
-        modelo.getArchivosBinariosCiudadano().escribir();
-       } 
-             */
         } else if (e.getSource() == vistaRegistroCedula.btnSeleccionarPuesto) {
             puestosVotacion.setVisible(true);
-//            vistaRegistroCedula.lblPuestoSeleccionado.setText(modelo.getPuesto().get(elementeSoleccionado-1).getDireccion());
 
         } else if (e.getSource() == vistaRegistroCedula.jButton1) {
             modelo.getArchivosBinariosCiudadano().leer();
-
         }
     }
 

@@ -43,7 +43,7 @@ public class VistaRegistroCedula extends javax.swing.JFrame {
         lblPuestoSeleccionado = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro de Cédula");
 
         jLabel1.setText("Cédula");

@@ -2,10 +2,12 @@
 package proyectofinalpoo;
 
 import controlador.ControladorVistaConsulta;
+import controlador.ControladorVistaInformacionCiudadano;
+import controlador.ControladorVistaMenu;
 import controlador.ControladorVistaRegistroCedula;
-import datos.ArchivosBinariosCiudadano;
-import datos.ArchivosBinariosPuestoVotacion;
 import modelo.Modelo;
+import vista.VistaInformacionCiudadano;
+import vista.VistaMenu;
 import vista.VistaPuestosVotacion;
 import vista.VistaRegistroCedula;
 
@@ -17,16 +19,15 @@ public class Main {
        VistaRegistroCedula vistaRegistroCedula=new VistaRegistroCedula();
        VistaPuestosVotacion puestosVotacion=new VistaPuestosVotacion();
        ControladorVistaRegistroCedula controladorVistaRegistroCedula=new ControladorVistaRegistroCedula(modelo, vistaRegistroCedula, puestosVotacion);
-       
-       controladorVistaRegistroCedula.iniciar();
-       vistaRegistroCedula.setVisible(true);   
-       
        ControladorVistaConsulta vistaConsulta=new ControladorVistaConsulta(modelo, puestosVotacion, controladorVistaRegistroCedula);       
               
        
-       // ArchivosBinariosPuestoVotacion a=new ArchivosBinariosPuestoVotacion();
-        //a.escribir();
-       // a.leer();
+       VistaInformacionCiudadano vistaInformacionCiudadano=new VistaInformacionCiudadano();
+       ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano=new ControladorVistaInformacionCiudadano(modelo,vistaInformacionCiudadano);
+       VistaMenu vistaMenu=new VistaMenu();
+       ControladorVistaMenu controladorVistaMenu=new ControladorVistaMenu(vistaMenu, controladorVistaRegistroCedula, controladorVistaInformacionCiudadano);
+       controladorVistaMenu.iniciar();
+       
     }
     
 }
