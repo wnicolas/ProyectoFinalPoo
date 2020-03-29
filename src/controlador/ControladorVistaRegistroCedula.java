@@ -41,7 +41,7 @@ public class ControladorVistaRegistroCedula implements ActionListener, Serializa
             modelo.getCiudadano().add(new Ciudadano(Integer.parseInt(vistaRegistroCedula.txtCedula.getText()), Integer.parseInt(vistaRegistroCedula.cbxDiaExpedicion.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxMesExpedicion.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxAnoExpedicion.getSelectedItem().toString()),
                     vistaRegistroCedula.txtLugarExpedicion.getText(), vistaRegistroCedula.txtPApellido.getText(), vistaRegistroCedula.txtSApellido.getText(), vistaRegistroCedula.txtPNombre.getText(), vistaRegistroCedula.txtSNombre.getText(),
                     Integer.parseInt(vistaRegistroCedula.cbxDiaNacimiento.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxMesNacimiento.getSelectedItem().toString()), Integer.parseInt(vistaRegistroCedula.cbxAnoNacimiento.getSelectedItem().toString()),
-                    vistaRegistroCedula.txtLugarNacimiento.getText(), vistaRegistroCedula.cbxSexo.getSelectedItem().toString()));
+                    vistaRegistroCedula.txtLugarNacimiento.getText(), vistaRegistroCedula.cbxSexo.getSelectedItem().toString(),modelo.getPuesto().get(elementeSoleccionado-1)));
 
             modelo.getArchivosBinariosCiudadano().escribir();
             

@@ -35,7 +35,7 @@ public class ArchivosBinariosCiudadano extends ArchivosBinarios implements Seria
                 Object data=objectInputStream.readObject();
                 Ciudadano ciudadano=(Ciudadano) data;
                 modelo.getCiudadano().add(ciudadano);
-                System.out.println(modelo.getCiudadano().get(i).getpNombre());
+                System.out.println(modelo.getCiudadano().get(i).getNumeroCedula()+"::::"+modelo.getCiudadano().get(i).getPuestoVotacion().getDireccion());
               i++;
             }
             //*****************************************************************

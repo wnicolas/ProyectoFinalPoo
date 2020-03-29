@@ -19,10 +19,11 @@ public class Ciudadano implements Serializable{
     private int anoNacimiento;
     private String lugarNacimiento;
     private String sexo;
+    private PuestoVotacion puestoVotacion;
     
     //Constructor
 
-    public Ciudadano(int numeroCedula, int diaExpedicion, int mesExpedicion, int anoExpedicion, String lugarExpedicion, String pAellido, String sApellido, String pNombre, String sNombre, int diaNacimiento, int mesNacimiento, int anoNacimiento, String lugarNacimiento, String sexo) {
+    public Ciudadano(int numeroCedula, int diaExpedicion, int mesExpedicion, int anoExpedicion, String lugarExpedicion, String pAellido, String sApellido, String pNombre, String sNombre, int diaNacimiento, int mesNacimiento, int anoNacimiento, String lugarNacimiento, String sexo,PuestoVotacion puestoVotacion) {
         this.numeroCedula = numeroCedula;
         this.diaExpedicion = diaExpedicion;
         this.mesExpedicion = mesExpedicion;
@@ -37,6 +38,7 @@ public class Ciudadano implements Serializable{
         this.anoNacimiento = anoNacimiento;
         this.lugarNacimiento = lugarNacimiento;
         this.sexo = sexo;
+        this.puestoVotacion=puestoVotacion;
     }
 
     public Ciudadano() {
@@ -155,5 +157,14 @@ public class Ciudadano implements Serializable{
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
+    public PuestoVotacion getPuestoVotacion() {
+        return puestoVotacion;
+    }
+
+    public void setPuestoVotacion(PuestoVotacion puestoVotacion) {
+        this.puestoVotacion = puestoVotacion;
+    }
+    
     
 }

@@ -12,7 +12,6 @@ import negocio.PuestoVotacion;
 public class Modelo implements Serializable{
     
     private PuestoVotacion puestoVotacion;
-    private Ciudadano  escribirCiudadano;
     private ArrayList<PuestoVotacion> puesto=new ArrayList();
     private ArrayList<Ciudadano> ciudadano=new ArrayList<Ciudadano>();
     private ArchivosBinariosCiudadano archivosBinariosCiudadano;
@@ -57,13 +56,6 @@ public class Modelo implements Serializable{
         this.puesto = puesto;
     }  
 
-    public Ciudadano getEscribirCiudadano() {
-        return escribirCiudadano;
-    }
-
-    public void setEscribirCiudadano(Ciudadano escribirCiudadano) {
-        this.escribirCiudadano = escribirCiudadano;
-    }
     
     
     
