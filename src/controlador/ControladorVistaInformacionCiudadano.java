@@ -20,6 +20,7 @@ public class ControladorVistaInformacionCiudadano implements ActionListener{
     }
     
     public void iniciar(){
+        vistaInformacionCiudadano.setTitle("Información de Ciudadano");
         vistaInformacionCiudadano.setLocationRelativeTo(null);
         vistaInformacionCiudadano.setVisible(true);
     }
@@ -38,6 +39,7 @@ public class ControladorVistaInformacionCiudadano implements ActionListener{
                 vistaInformacionCiudadano.lblFechaNacimiento.setText(ciudadano.getDiaNacimiento()+"/"+ciudadano.getMesNacimiento()+"/"+ciudadano.getAnoNacimiento());
                 vistaInformacionCiudadano.lblLugarNacimiento.setText(ciudadano.getLugarNacimiento());
                 vistaInformacionCiudadano.lblSexo.setText(ciudadano.getSexo());
+                vistaInformacionCiudadano.lblPuesto.setText(ciudadano.getPuestoVotacion().getDepartamento()+" / "+ciudadano.getPuestoVotacion().getMunicipio()+" / "+ciudadano.getPuestoVotacion().getLugar()+" / "+ciudadano.getPuestoVotacion().getDireccion());
             }
         }
     }

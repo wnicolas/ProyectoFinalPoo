@@ -30,6 +30,7 @@ public class ControladorVistaRegistroCedula implements ActionListener, Serializa
     }
 
     public void iniciar() {
+        vistaRegistroCedula.setTitle("Inscribir Ciudadano");
         vistaRegistroCedula.setLocationRelativeTo(null);
         vistaRegistroCedula.setVisible(true);
     }

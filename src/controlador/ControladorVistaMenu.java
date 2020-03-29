@@ -14,16 +14,20 @@ public class ControladorVistaMenu implements ActionListener{
     
     private VistaInformacionCiudadano vistaInformacionCiudadano;
     private ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano;
+    private ControladorVistaModificarCiudadano controladorVistaModificarCiudadano;
     
-    public ControladorVistaMenu(VistaMenu vistaMenu, ControladorVistaRegistroCedula controladorVistaRegistroCedula, ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano) {
+    public ControladorVistaMenu(VistaMenu vistaMenu, ControladorVistaRegistroCedula controladorVistaRegistroCedula, ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano, ControladorVistaModificarCiudadano controladorVistaModificarCiudadano) {
         this.vistaMenu = vistaMenu;
         this.controladorVistaRegistroCedula = controladorVistaRegistroCedula;
         this.controladorVistaInformacionCiudadano=controladorVistaInformacionCiudadano;
+        this.controladorVistaModificarCiudadano=controladorVistaModificarCiudadano;
         
         this.vistaMenu.btnInscribirCiudadano.addActionListener(this);
         this.vistaMenu.btnInformacionCiudadano.addActionListener(this);
+        this.vistaMenu.btnModificarCiudadano.addActionListener(this);
     }
     public void iniciar(){
+        vistaMenu.setTitle("Menú");
         vistaMenu.setLocationRelativeTo(null);
         vistaMenu.setVisible(true);
     }
@@ -34,6 +38,8 @@ public class ControladorVistaMenu implements ActionListener{
             controladorVistaRegistroCedula.iniciar();  
         }else if(e.getSource()==vistaMenu.btnInformacionCiudadano){
             controladorVistaInformacionCiudadano.iniciar();
+        }else if(e.getSource()==vistaMenu.btnModificarCiudadano){
+            controladorVistaModificarCiudadano.iniciar();
         }
     }
     

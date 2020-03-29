@@ -29,7 +29,7 @@ public class VistaMenu extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         btnInscribirCiudadano = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnModificarCiudadano = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnInformacionCiudadano = new javax.swing.JButton();
@@ -40,14 +40,14 @@ public class VistaMenu extends javax.swing.JFrame {
 
         btnInscribirCiudadano.setText("Inscribir ciudadano");
 
-        jButton2.setText("Modificar Puesto de Votación");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarCiudadano.setText("Modificar ciudadano");
+        btnModificarCiudadano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnModificarCiudadanoActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Inscribir ciudadano");
+        jButton3.setText("Aún no sé");
 
         jButton4.setText("Listar Ciudadanos");
 
@@ -58,24 +58,24 @@ public class VistaMenu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2))
+                        .addComponent(jButton4)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnInscribirCiudadano)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                                .addComponent(btnInformacionCiudadano))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
+                                .addComponent(btnInformacionCiudadano)))
+                        .addGap(60, 60, 60))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4)
-                            .addComponent(jButton3))))
-                .addGap(88, 88, 88))
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnModificarCiudadano)
+                        .addGap(90, 90, 90))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,20 +87,20 @@ public class VistaMenu extends javax.swing.JFrame {
                     .addComponent(btnInscribirCiudadano)
                     .addComponent(btnInformacionCiudadano))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnModificarCiudadano)
+                    .addComponent(jButton3))
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addGap(28, 28, 28)
                 .addComponent(jButton4)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnModificarCiudadanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCiudadanoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnModificarCiudadanoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,7 +140,7 @@ public class VistaMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnInformacionCiudadano;
     public javax.swing.JButton btnInscribirCiudadano;
-    public javax.swing.JButton jButton2;
+    public javax.swing.JButton btnModificarCiudadano;
     public javax.swing.JButton jButton3;
     public javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
