@@ -1,9 +1,10 @@
 
 package negocio;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PuestoVotacion {
+public class PuestoVotacion implements Serializable{
     private String departamento;
     private String municipio;
     private String lugar;

@@ -3,11 +3,12 @@ package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Serializable;
 import modelo.Modelo;
 import vista.VistaPuestosVotacion;
 import vista.VistaRegistroCedula;
 
-public class ControladorVistaConsulta implements ActionListener{
+public class ControladorVistaConsulta implements ActionListener,Serializable{
 
     private Modelo modelo;
     private VistaPuestosVotacion puestosVotacion;

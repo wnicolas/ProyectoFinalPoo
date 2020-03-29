@@ -1,22 +1,35 @@
 
 package modelo;
 
-import controlador.ControladorVistaConsulta;
+import datos.ArchivosBinariosCiudadano;
 import datos.LectorPuestos;
+import java.io.Serializable;
 import java.util.ArrayList;
 import negocio.Ciudadano;
 import negocio.PuestoVotacion;
 
-public class Modelo {
+
+public class Modelo implements Serializable{
     
     private PuestoVotacion puestoVotacion;
+    private Ciudadano  escribirCiudadano;
     private ArrayList<PuestoVotacion> puesto=new ArrayList();
     private ArrayList<Ciudadano> ciudadano=new ArrayList<Ciudadano>();
+    private ArchivosBinariosCiudadano archivosBinariosCiudadano;
     
     public Modelo(){
         LectorPuestos lectorPuesto=new LectorPuestos(this);
+        archivosBinariosCiudadano=new ArchivosBinariosCiudadano(this);
+        
          
-         
+    }
+
+    public ArchivosBinariosCiudadano getArchivosBinariosCiudadano() {
+        return archivosBinariosCiudadano;
+    }
+
+    public void setArchivosBinariosCiudadano(ArchivosBinariosCiudadano archivosBinariosCiudadano) {
+        this.archivosBinariosCiudadano = archivosBinariosCiudadano;
     }
 
     public ArrayList<Ciudadano> getCiudadano() {
@@ -43,6 +56,16 @@ public class Modelo {
     public void setPuesto(ArrayList<PuestoVotacion> puesto) {
         this.puesto = puesto;
     }  
+
+    public Ciudadano getEscribirCiudadano() {
+        return escribirCiudadano;
+    }
+
+    public void setEscribirCiudadano(Ciudadano escribirCiudadano) {
+        this.escribirCiudadano = escribirCiudadano;
+    }
+    
+    
     
 }
     

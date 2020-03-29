@@ -24,8 +24,8 @@ public class Main {
        ControladorVistaConsulta vistaConsulta=new ControladorVistaConsulta(modelo, puestosVotacion, controladorVistaRegistroCedula);       
               
        
-        ArchivosBinariosPuestoVotacion a=new ArchivosBinariosPuestoVotacion();
-        a.escribir();
+       // ArchivosBinariosPuestoVotacion a=new ArchivosBinariosPuestoVotacion();
+        //a.escribir();
        // a.leer();
     }
     

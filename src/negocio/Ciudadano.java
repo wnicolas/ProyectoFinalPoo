@@ -1,7 +1,9 @@
 
 package negocio;
 
-public class Ciudadano {
+import java.io.Serializable;
+
+public class Ciudadano implements Serializable{
     //Declaración de atributos de la clase Ciudadano
     private int numeroCedula;
     private int diaExpedicion;
@@ -39,10 +41,7 @@ public class Ciudadano {
 
     public Ciudadano() {
     }
-    
-    
-    
-    
+  
     //Generación de getters y setters
 
     public int getNumeroCedula() {
