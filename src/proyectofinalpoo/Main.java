@@ -3,11 +3,13 @@ package proyectofinalpoo;
 
 import controlador.ControladorVistaConsulta;
 import controlador.ControladorVistaInformacionCiudadano;
+import controlador.ControladorVistaListarCiudadano;
 import controlador.ControladorVistaMenu;
 import controlador.ControladorVistaModificarCiudadano;
 import controlador.ControladorVistaRegistroCedula;
 import modelo.Modelo;
 import vista.VistaInformacionCiudadano;
+import vista.VistaListarCiudadanos;
 import vista.VistaMenu;
 import vista.VistaModificarCiudadano;
 import vista.VistaPuestosVotacion;
@@ -32,8 +34,11 @@ public class Main {
        ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano=new ControladorVistaInformacionCiudadano(modelo,vistaInformacionCiudadano);
        VistaMenu vistaMenu=new VistaMenu();
        
+        VistaListarCiudadanos vistaListarCiudadanos=new VistaListarCiudadanos();
+        ControladorVistaListarCiudadano controladorVistaListarCiudadano=new ControladorVistaListarCiudadano(modelo, vistaListarCiudadanos);
+        
       
-       ControladorVistaMenu controladorVistaMenu=new ControladorVistaMenu(vistaMenu, controladorVistaRegistroCedula, controladorVistaInformacionCiudadano,controladorVistaModificarCiudadano);
+       ControladorVistaMenu controladorVistaMenu=new ControladorVistaMenu(vistaMenu, controladorVistaRegistroCedula, controladorVistaInformacionCiudadano,controladorVistaModificarCiudadano, controladorVistaListarCiudadano);
        controladorVistaMenu.iniciar();
        
     }

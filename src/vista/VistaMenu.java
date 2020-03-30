@@ -30,8 +30,7 @@ public class VistaMenu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnInscribirCiudadano = new javax.swing.JButton();
         btnModificarCiudadano = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnListarCiudadano = new javax.swing.JButton();
         btnInformacionCiudadano = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,9 +46,7 @@ public class VistaMenu extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Aún no sé");
-
-        jButton4.setText("Listar Ciudadanos");
+        btnListarCiudadano.setText("Listar Ciudadanos");
 
         btnInformacionCiudadano.setText("Información de ciudadano");
 
@@ -61,9 +58,6 @@ public class VistaMenu extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
@@ -72,7 +66,7 @@ public class VistaMenu extends javax.swing.JFrame {
                                 .addComponent(btnInformacionCiudadano)))
                         .addGap(60, 60, 60))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(btnListarCiudadano)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnModificarCiudadano)
                         .addGap(90, 90, 90))))
@@ -89,10 +83,8 @@ public class VistaMenu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnModificarCiudadano)
-                    .addComponent(jButton3))
-                .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addContainerGap(203, Short.MAX_VALUE))
+                    .addComponent(btnListarCiudadano))
+                .addContainerGap(244, Short.MAX_VALUE))
         );
 
         pack();
@@ -140,9 +132,8 @@ public class VistaMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnInformacionCiudadano;
     public javax.swing.JButton btnInscribirCiudadano;
+    public javax.swing.JButton btnListarCiudadano;
     public javax.swing.JButton btnModificarCiudadano;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

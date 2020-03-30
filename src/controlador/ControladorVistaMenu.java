@@ -15,16 +15,19 @@ public class ControladorVistaMenu implements ActionListener{
     private VistaInformacionCiudadano vistaInformacionCiudadano;
     private ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano;
     private ControladorVistaModificarCiudadano controladorVistaModificarCiudadano;
+    private ControladorVistaListarCiudadano controladorVistaListarCiudadano;
     
-    public ControladorVistaMenu(VistaMenu vistaMenu, ControladorVistaRegistroCedula controladorVistaRegistroCedula, ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano, ControladorVistaModificarCiudadano controladorVistaModificarCiudadano) {
+    public ControladorVistaMenu(VistaMenu vistaMenu, ControladorVistaRegistroCedula controladorVistaRegistroCedula, ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano, ControladorVistaModificarCiudadano controladorVistaModificarCiudadano, ControladorVistaListarCiudadano controladorVistaListarCiudadano) {
         this.vistaMenu = vistaMenu;
         this.controladorVistaRegistroCedula = controladorVistaRegistroCedula;
         this.controladorVistaInformacionCiudadano=controladorVistaInformacionCiudadano;
         this.controladorVistaModificarCiudadano=controladorVistaModificarCiudadano;
+        this.controladorVistaListarCiudadano=controladorVistaListarCiudadano;
         
         this.vistaMenu.btnInscribirCiudadano.addActionListener(this);
         this.vistaMenu.btnInformacionCiudadano.addActionListener(this);
         this.vistaMenu.btnModificarCiudadano.addActionListener(this);
+        this.vistaMenu.btnListarCiudadano.addActionListener(this);
     }
     public void iniciar(){
         vistaMenu.setTitle("Menú");
@@ -40,6 +43,8 @@ public class ControladorVistaMenu implements ActionListener{
             controladorVistaInformacionCiudadano.iniciar();
         }else if(e.getSource()==vistaMenu.btnModificarCiudadano){
             controladorVistaModificarCiudadano.iniciar();
+        }else if(e.getSource()==vistaMenu.btnListarCiudadano){
+            controladorVistaListarCiudadano.iniciar();
         }
     }
     

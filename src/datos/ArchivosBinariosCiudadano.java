@@ -28,20 +28,14 @@ public class ArchivosBinariosCiudadano extends ArchivosBinarios implements Seria
 
             //*****************************************************************
             modelo.getCiudadano().clear();
-            int i=0;
-            while(true){
-                
-                
+           
+            while(true){  
                 Object data=objectInputStream.readObject();
                 Ciudadano ciudadano=(Ciudadano) data;
                 modelo.getCiudadano().add(ciudadano);
-                System.out.println(modelo.getCiudadano().get(i).getNumeroCedula()+"::::"+modelo.getCiudadano().get(i).getPuestoVotacion().getDireccion());
-              i++;
             }
             //*****************************************************************
-            //  Object data = objectInputStream.readObject();
-            // PuestoVotacion puestoVotacion = (PuestoVotacion) data;
-            //System.out.println(puestoVotacion.getDepartamento() + puestoVotacion.getMunicipio() + puestoVotacion.getLugar() + puestoVotacion.getDireccion());
+            
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ArchivosBinariosCiudadano.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException | ClassNotFoundException ex) {
@@ -61,19 +55,15 @@ public class ArchivosBinariosCiudadano extends ArchivosBinarios implements Seria
 
             //*****************************************************************
             
-            
             for (Ciudadano c: modelo.getCiudadano()) {
                 objectOutputStream.writeObject(c);
 
             }
             
-           
             objectOutputStream.close();
-            
-
+          
             //*****************************************************************
-            //  PuestoVotacion puestoVotacion = new PuestoVotacion("bood", "ken", "patio", "calle34");
-            //   objectOutputStream.writeObject(puestoVotacion);
+       
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ArchivosBinariosCiudadano.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
