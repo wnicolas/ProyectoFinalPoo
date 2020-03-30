@@ -26,7 +26,6 @@ public class ControladorVistaRegistroCedula implements ActionListener, Serializa
         this.puestosVotacion = puestosVotacion;
         vistaRegistroCedula.btnRegistrar.addActionListener(this);
         vistaRegistroCedula.btnSeleccionarPuesto.addActionListener(this);
-        vistaRegistroCedula.jButton1.addActionListener(this);
     }
 
     public void iniciar() {
@@ -54,8 +53,6 @@ public class ControladorVistaRegistroCedula implements ActionListener, Serializa
         } else if (e.getSource() == vistaRegistroCedula.btnSeleccionarPuesto) {
             puestosVotacion.setVisible(true);
 
-        } else if (e.getSource() == vistaRegistroCedula.jButton1) {
-            modelo.getArchivosBinariosCiudadano().leer();
         }
     }
 
