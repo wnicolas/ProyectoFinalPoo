@@ -32,6 +32,7 @@ public class VistaMenu extends javax.swing.JFrame {
         btnModificarCiudadano = new javax.swing.JButton();
         btnListarCiudadano = new javax.swing.JButton();
         btnInformacionCiudadano = new javax.swing.JButton();
+        btnPorcentajeGenero = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +51,13 @@ public class VistaMenu extends javax.swing.JFrame {
 
         btnInformacionCiudadano.setText("Información de ciudadano");
 
+        btnPorcentajeGenero.setText("Porcentaje de género");
+        btnPorcentajeGenero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPorcentajeGeneroActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -60,17 +68,21 @@ public class VistaMenu extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnInscribirCiudadano)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                        .addComponent(btnInformacionCiudadano)
-                        .addContainerGap())
+                        .addComponent(btnInformacionCiudadano))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnModificarCiudadano)
                         .addGap(18, 18, 18)
                         .addComponent(btnListarCiudadano)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(124, 124, 124)
                 .addComponent(jLabel1)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnPorcentajeGenero)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,7 +97,9 @@ public class VistaMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnModificarCiudadano)
                     .addComponent(btnListarCiudadano))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnPorcentajeGenero)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -94,6 +108,10 @@ public class VistaMenu extends javax.swing.JFrame {
     private void btnModificarCiudadanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarCiudadanoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnModificarCiudadanoActionPerformed
+
+    private void btnPorcentajeGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPorcentajeGeneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPorcentajeGeneroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,6 +153,7 @@ public class VistaMenu extends javax.swing.JFrame {
     public javax.swing.JButton btnInscribirCiudadano;
     public javax.swing.JButton btnListarCiudadano;
     public javax.swing.JButton btnModificarCiudadano;
+    public javax.swing.JButton btnPorcentajeGenero;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

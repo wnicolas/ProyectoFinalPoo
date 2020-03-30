@@ -38,7 +38,7 @@ public class Main {
         ControladorVistaListarCiudadano controladorVistaListarCiudadano=new ControladorVistaListarCiudadano(modelo, vistaListarCiudadanos);
         
       
-       ControladorVistaMenu controladorVistaMenu=new ControladorVistaMenu(vistaMenu, controladorVistaRegistroCedula, controladorVistaInformacionCiudadano,controladorVistaModificarCiudadano, controladorVistaListarCiudadano);
+       ControladorVistaMenu controladorVistaMenu=new ControladorVistaMenu(modelo,vistaMenu, controladorVistaRegistroCedula, controladorVistaInformacionCiudadano,controladorVistaModificarCiudadano, controladorVistaListarCiudadano);
        controladorVistaMenu.iniciar();
        
     }

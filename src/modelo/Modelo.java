@@ -1,4 +1,3 @@
-
 package modelo;
 
 import datos.ArchivosBinariosCiudadano;
@@ -8,19 +7,17 @@ import java.util.ArrayList;
 import negocio.Ciudadano;
 import negocio.PuestoVotacion;
 
+public class Modelo implements Serializable {
 
-public class Modelo implements Serializable{
-    
     private PuestoVotacion puestoVotacion;
-    private ArrayList<PuestoVotacion> puesto=new ArrayList();
-    private ArrayList<Ciudadano> ciudadano=new ArrayList<Ciudadano>();
+    private ArrayList<PuestoVotacion> puesto = new ArrayList();
+    private ArrayList<Ciudadano> ciudadano = new ArrayList<Ciudadano>();
     private ArchivosBinariosCiudadano archivosBinariosCiudadano;
-    
-    public Modelo(){
-        LectorPuestos lectorPuesto=new LectorPuestos(this);
-        archivosBinariosCiudadano=new ArchivosBinariosCiudadano(this);
-        
-         
+
+    public Modelo() {
+        LectorPuestos lectorPuesto = new LectorPuestos(this);
+        archivosBinariosCiudadano = new ArchivosBinariosCiudadano(this);
+
     }
 
     public ArchivosBinariosCiudadano getArchivosBinariosCiudadano() {
@@ -39,7 +36,6 @@ public class Modelo implements Serializable{
         this.ciudadano = ciudadano;
     }
 
-
     public PuestoVotacion getPuestoVotacion() {
         return puestoVotacion;
     }
@@ -54,11 +50,28 @@ public class Modelo implements Serializable{
 
     public void setPuesto(ArrayList<PuestoVotacion> puesto) {
         this.puesto = puesto;
-    }  
+    }
 
-    
-    
-    
+    public String calcularPorcentajeGenero() {
+        int total = 0;
+        int mujeres = 0;
+        int hombres = 0;
+        float pHombres,pMujeres;
+
+        this.getArchivosBinariosCiudadano().leer();
+
+        for (Ciudadano ciudadano : this.getCiudadano()) {
+            total++;
+            if (ciudadano.getSexo().equals("Masculino")) {
+                hombres++;
+            } else {
+                mujeres++;
+            }
+        }
+        
+        pHombres=(hombres*100)/total;
+        pMujeres=100-pHombres;
+        
+        return "El porcentaje de hombres es del "+pHombres+"% y el porcentaje de mujeres es del "+pMujeres+"%.";
+    }
 }
-    
-
