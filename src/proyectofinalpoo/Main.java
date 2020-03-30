@@ -18,19 +18,21 @@ public class Main {
     public static void main(String[] args) {
        Modelo modelo=new Modelo();
        
+       VistaModificarCiudadano vistaModificarCiudadano=new VistaModificarCiudadano();
+       
        VistaRegistroCedula vistaRegistroCedula=new VistaRegistroCedula();
        VistaPuestosVotacion puestosVotacion=new VistaPuestosVotacion();
+      
+       ControladorVistaModificarCiudadano controladorVistaModificarCiudadano=new ControladorVistaModificarCiudadano(modelo, vistaModificarCiudadano,puestosVotacion);
        ControladorVistaRegistroCedula controladorVistaRegistroCedula=new ControladorVistaRegistroCedula(modelo, vistaRegistroCedula, puestosVotacion);
-       ControladorVistaConsulta vistaConsulta=new ControladorVistaConsulta(modelo, puestosVotacion, controladorVistaRegistroCedula);       
+       ControladorVistaConsulta vistaConsulta=new ControladorVistaConsulta(modelo, puestosVotacion, controladorVistaRegistroCedula,controladorVistaModificarCiudadano);       
               
        
        VistaInformacionCiudadano vistaInformacionCiudadano=new VistaInformacionCiudadano();
        ControladorVistaInformacionCiudadano controladorVistaInformacionCiudadano=new ControladorVistaInformacionCiudadano(modelo,vistaInformacionCiudadano);
        VistaMenu vistaMenu=new VistaMenu();
        
-        VistaModificarCiudadano vistaModificarCiudadano=new VistaModificarCiudadano();
-        ControladorVistaModificarCiudadano controladorVistaModificarCiudadano=new ControladorVistaModificarCiudadano(modelo, vistaModificarCiudadano);
-       
+      
        ControladorVistaMenu controladorVistaMenu=new ControladorVistaMenu(vistaMenu, controladorVistaRegistroCedula, controladorVistaInformacionCiudadano,controladorVistaModificarCiudadano);
        controladorVistaMenu.iniciar();
        
